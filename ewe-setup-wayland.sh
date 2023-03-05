@@ -5,7 +5,7 @@
 # By MIT License.
 
 
-compositorList="sway"
+compositorList="sway wayfire weston hyprland"
 
 usage() {
 	echo "$0: Setup Wayland Compositors"
@@ -43,7 +43,7 @@ then
 	echo "No compositor specified. Only permission will be adjusted."
 elif echo $compositorList | grep $2 > /dev/null
 then
-	echo "Specified compositor $gCompositor."
+	echo "Specified compositor $2."
 	pacman -Syu $2
 else
 	echo "No compositor specified. Only permission will be adjusted."
